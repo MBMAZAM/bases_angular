@@ -6,7 +6,11 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:gh": "ng build --output-path dist --base-href ./ ",
+    "copy:dist": "copyfiles dist/browser/* ./docs -f",
+    "clean:dist": "rd /s /q dist",
+    "deploy:gh": "npm run build:gh && npm run copy:dist && npm run clean:dist"
   },
   "private": true,
   "dependencies": {
