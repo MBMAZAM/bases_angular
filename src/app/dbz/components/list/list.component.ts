@@ -22,15 +22,14 @@ export class ListComponent {
   ];
 
   @Output()
-  public onDelete: EventEmitter<number> = new EventEmitter<number>();
+  public onDelete: EventEmitter<string> = new EventEmitter();
 
+  public onDeleteCharacter(id?: string): void {
 
-  public onDeleteCharacter(index: number): void {
-    console.log('deleteCharacter', index);
-    this.onDelete.emit(index);
+    if (!id) return;
+
+    this.onDelete.emit(id);
   }
-
-
 
 
 }

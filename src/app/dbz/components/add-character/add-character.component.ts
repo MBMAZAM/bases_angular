@@ -27,8 +27,7 @@ export class AddCharacterComponent {
       name: '',
       power: 0
     }
-    // this.character.name = '';
-    // this.character.power = 0;
+
   }
 
 
